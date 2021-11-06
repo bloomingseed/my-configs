@@ -1,0 +1,1 @@
+- Store some config files & how to install them
