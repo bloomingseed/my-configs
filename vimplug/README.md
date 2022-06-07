@@ -67,4 +67,15 @@ nnoremap <silent> <Leader>rf :call VimuxRunCommand("bundle exec rspec " .  bufna
 " Run rspec current line
 nnoremap <silent> <Leader>rl :call VimuxRunCommand("bundle exec rspec " .  bufname("%") . ":" .  line("."))<CR>
 
+
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+"let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+
 ```
