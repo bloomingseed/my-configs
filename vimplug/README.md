@@ -32,6 +32,14 @@ Plug 'easymotion/vim-easymotion'¬
 Plug 'preservim/vimux'
 call plug#end()
 
+
+" Set <leader> to Space character
+let mapleader = "\<Space>"
+
+" Save a file
+nnoremap <Leader>w :w<CR>
+
+
 " Map for Ack.vim
 nnoremap <Leader>a :Ack!<Space>
 
