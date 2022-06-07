@@ -32,11 +32,39 @@ Plug 'easymotion/vim-easymotion'¬
 Plug 'preservim/vimux'
 call plug#end()
 
+" Map for Ack.vim
+nnoremap <Leader>a :Ack!<Space>
+
 " Use the silver searcher Ag¬
 " Require Ag installed: sudo apt-get install silversearcher-ag (https://github.com/ggreer/the_silver_searcher)
 let g:ackprg = 'ag --vimgrep'
+
+" Map to access clipboard
+nnoremap <c-c> "+
+
+" Map to go prev window
+nnoremap <c-w>p :tabp<cr>
+
+" Map to Git push -fu
+nnoremap <leader>gp :Git push -fu 
+
+" Use the silver searcher Ag
+let g:ackprg = 'ag --vimgrep'
+
+" Copy file path and current line number to clipboard
+
+function! WhereAmI()
+	redir @+ | echo @% . ":" . line(".") | redir END
+endfunction
+
+nnoremap <c-w>ami :call WhereAmI()<cr>
+
+" Show cursor highlight vertically
+set cursorcolumn
+
 " Run rspec file
-nnoremap <silent> <Leader>rs :call VimuxRunCommand("clear; rspec " .  bufname("%"))<CR>
-" Run rspec test case
-nnoremap <silent> <Leader>rt :call VimuxRunCommand("clear; rspec " .  bufname("%") . ":" .  line("."))<CR>
+nnoremap <silent> <Leader>rf :call VimuxRunCommand("bundle exec rspec " .  bufname("%"))<CR>
+" Run rspec current line
+nnoremap <silent> <Leader>rl :call VimuxRunCommand("bundle exec rspec " .  bufname("%") . ":" .  line("."))<CR>
+
 ```
