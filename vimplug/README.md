@@ -87,3 +87,7 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 
 ```
+- Another script to be updated:
+```
+Plug 'idanarye/vim-merginal'
+```
