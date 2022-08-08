@@ -91,3 +91,20 @@ map <Leader>h <Plug>(easymotion-linebackward)
 ```
 Plug 'idanarye/vim-merginal'
 ```
+
+- `gruvbox` alternative: `onehalf`
+
+```
+...
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+...
+" configure onehalf colorscheme
+syntax on
+set t_Co=256
+"colorscheme onehalflight
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
+" lightline
+" let g:lightline = { 'colorscheme': 'onehalfdark' }
+```
+
